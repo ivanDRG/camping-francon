@@ -4,6 +4,12 @@
 *:focus {
   outline: none !important;
 }
+body {
+  background-image: url('./components/images/homeimage1.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
 h1 {
   font-family: "Rubik", sans-serif;
   font-weight: 900;
@@ -23,6 +29,7 @@ h1 {
 .homeMobile {
   background-color: #ff6f3c;
   height: auto;
+  width: 100%;
   margin: 0;
 }
 .homeTitle {
@@ -68,8 +75,38 @@ h1 {
 }
 
 .colAbout{
-  height: 100vh;
+  height: auto;
+  margin: 2vw;
+
+}
+.textAbout{
+  background-color: #ffffff;
+  color: #4d3e3e;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 5px;
+  
+}
+.aboutImage{
+  height: 15rem;
+  width: 15rem;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+  border-radius: 5px;
+}
+.bigImg{
+  height: 30.5rem;
+  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+  border-radius: 5px;
+}
+.aboutContainer{
+  background-color: #cfcaca;
 }
 .relative{
   position: relative;
+}
+.marginBottom{
+  margin-bottom: .5rem;
+}
+.marginTop{
+  margin-top: .5rem;
 }
