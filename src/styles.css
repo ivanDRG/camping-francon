@@ -27,10 +27,11 @@ h1 {
   margin: 0;
 }
 .homeMobile {
-  background-color: #ff6f3c;
+  background-color: #cfcaca;
   height: auto;
   width: 100%;
   margin: 0;
+  border: none;
 }
 .homeTitle {
   background: rgba(225, 228, 226, 0.842);
@@ -100,6 +101,7 @@ h1 {
 }
 .aboutContainer{
   background-color: #cfcaca;
+  padding: 2vh 0;
 }
 .relative{
   position: relative;
@@ -109,4 +111,32 @@ h1 {
 }
 .marginTop{
   margin-top: .5rem;
+}
+.Features{
+  padding: 5vh 0;;
+}
+.location{
+  background-color: #cfcaca;
+  padding: 5vh;
+}
+.location h1{
+  position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin-top: -9px;
+}
+.location p{
+  position: absolute;
+  text-align: left;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-top: -9px;
+}
+#map {
+  width: 50%;
+  height: 400px;
+  float: right;
+  background-color: grey;
 }

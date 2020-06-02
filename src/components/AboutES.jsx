@@ -25,7 +25,9 @@ function AboutES() {
                 <img src={bungalow} alt="" className="aboutImage"/>
             </div>
             <div className="textAbout marginTop">
-                <h1>Hello</h1>
+                <h1>Comodidad + libertad</h1>
+                <p>Goza de todas las comodidades y además con acceso directo a la playa, para que puedas entrar y salir cuando quieras
+                .</p>
             </div>
         </div>
         
