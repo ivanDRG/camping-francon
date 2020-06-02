@@ -1,0 +1,75 @@
+* {
+  font-family: "Rubik", sans-serif;
+}
+*:focus {
+  outline: none !important;
+}
+h1 {
+  font-family: "Rubik", sans-serif;
+  font-weight: 900;
+}
+.noMargin{
+  margin: 0;
+}
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.HomeStyle {
+  background-size: 100% 100%;
+  height: 95vh;
+  margin: 0;
+}
+.homeMobile {
+  background-color: #ff6f3c;
+  height: auto;
+  margin: 0;
+}
+.homeTitle {
+  background: rgba(225, 228, 226, 0.842);
+  width: 50vw;
+  height: min-content;
+  min-height: 70vh;
+  position: relative;
+  top: 10vh;
+}
+.showMoreButton{
+  position: absolute;
+  margin-top: auto;
+}
+.showMoreButton:hover {
+  color: grey;
+  background-color: transparent !important;
+}
+.showMoreButton:active {
+  outline: none !important;
+}
+.MuiSvgIcon-root{
+  font-size: 7rem !important;
+}
+.MuiTouchRipple-root{
+  position: relative !important;
+}
+.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+.vert-move {
+  -webkit-animation: mover 1s infinite  alternate;
+  animation: mover 1s infinite  alternate;
+}
+@-webkit-keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+@keyframes mover {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
+}
+
+.colAbout{
+  height: 100vh;
+}
+.relative{
+  position: relative;
+}
