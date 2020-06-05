@@ -120,14 +120,12 @@ h1 {
   padding: 5vh;
 }
 .location h1{
-  position: absolute;
     top: 30%;
     left: 0;
     right: 0;
     margin-top: -9px;
 }
 .location p{
-  position: absolute;
   text-align: left;
     top: 50%;
     left: 0;
@@ -139,4 +137,14 @@ h1 {
   height: 400px;
   float: right;
   background-color: grey;
+}
+.galery{
+  height: 70vh;
+  padding-top: 2rem;
+  background-color: rgb(53, 53, 53);
+  color: #f8f8f8;
+}
+.galery img{
+  width: 50vw !important;
+  margin: auto;
 }
