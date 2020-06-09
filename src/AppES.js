@@ -6,6 +6,7 @@ import About from "./components/AboutES";
 import Features from "./components/FeaturesES";
 import Location from "./components/LocationES";
 import Galery from "./components/Galery";
+import Tarifas from "./components/TarifasES";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Features />
       <Location />
       <Galery />
+      <Tarifas />
     </div>
   );
 }

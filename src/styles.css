@@ -5,7 +5,7 @@
   outline: none !important;
 }
 body {
-  background-image: url('./components/images/homeimage1.jpg');
+  background-image: url("./components/images/homeimage1.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -14,7 +14,7 @@ h1 {
   font-family: "Rubik", sans-serif;
   font-weight: 900;
 }
-.noMargin{
+.noMargin {
   margin: 0;
 }
 .App {
@@ -41,7 +41,7 @@ h1 {
   position: relative;
   top: 10vh;
 }
-.showMoreButton{
+.showMoreButton {
   position: absolute;
   margin-top: auto;
 }
@@ -52,85 +52,91 @@ h1 {
 .showMoreButton:active {
   outline: none !important;
 }
-.MuiSvgIcon-root{
+.MuiSvgIcon-root {
   font-size: 7rem !important;
 }
-.MuiTouchRipple-root{
+.MuiTouchRipple-root {
   position: relative !important;
 }
 .vert-move {
-  -webkit-animation: mover 1s infinite  alternate;
-  animation: mover 1s infinite  alternate;
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
 }
 .vert-move {
-  -webkit-animation: mover 1s infinite  alternate;
-  animation: mover 1s infinite  alternate;
+  -webkit-animation: mover 1s infinite alternate;
+  animation: mover 1s infinite alternate;
 }
 @-webkit-keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 @keyframes mover {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
 }
 
-.colAbout{
+.colAbout {
   height: auto;
   margin: 2vw;
-
 }
-.textAbout{
+.textAbout {
   background-color: #ffffff;
   color: #4d3e3e;
   height: 15rem;
   width: 15rem;
   border-radius: 5px;
-  
 }
-.aboutImage{
+.aboutImage {
   height: 15rem;
   width: 15rem;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
-.bigImg{
+.bigImg {
   height: 30.5rem;
-  box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) ;
+  box-shadow: 0 10px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
 }
-.aboutContainer{
+.aboutContainer {
   background-color: #cfcaca;
   padding: 2vh 0;
 }
-.relative{
+.relative {
   position: relative;
 }
-.marginBottom{
-  margin-bottom: .5rem;
+.marginBottom {
+  margin-bottom: 0.5rem;
 }
-.marginTop{
-  margin-top: .5rem;
+.marginTop {
+  margin-top: 0.5rem;
 }
-.Features{
-  padding: 5vh 0;;
+.Features {
+  padding: 5vh 0;
 }
-.location{
+.location {
   background-color: #cfcaca;
   padding: 5vh;
 }
-.location h1{
-    top: 30%;
-    left: 0;
-    right: 0;
-    margin-top: -9px;
+.location h1 {
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin-top: -9px;
 }
-.location p{
+.location p {
   text-align: left;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin-top: -9px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -9px;
 }
 #map {
   width: 50%;
@@ -138,13 +144,17 @@ h1 {
   float: right;
   background-color: grey;
 }
-.galery{
+.galery {
   height: 70vh;
   padding-top: 2rem;
   background-color: rgb(53, 53, 53);
   color: #f8f8f8;
 }
-.galery img{
+.galery img {
   width: 50vw !important;
   margin: auto;
+}
+.tarifas {
+  min-height: 100vh;
+  height: auto;
 }
