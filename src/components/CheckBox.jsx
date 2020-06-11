@@ -9,6 +9,7 @@ function CheckBox(props) {
           <input
             type="checkbox"
             aria-label="Checkbox for following text input"
+            onChange={props.change}
           />
         </div>
       </div>
