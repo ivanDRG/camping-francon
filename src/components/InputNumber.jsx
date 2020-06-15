@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "../styles.css";
 
 function InputNumber(props) {
-
   return (
     <div class="input-group mb-3">
       <div class="input-group-prepend">
@@ -15,6 +14,7 @@ function InputNumber(props) {
         class="form-control"
         aria-label="Username"
         aria-describedby="basic-addon1"
+        max={props.max}
         onChange={props.change}
       />
     </div>

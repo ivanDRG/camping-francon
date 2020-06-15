@@ -9,8 +9,8 @@ function Tarifas() {
   const [adultos, setAdultos] = useState(0);
   const [niños, setNiños] = useState(0);
   const [where, setWhere] = useState("");
-  const [from, setFrom] = useState();
-  const [to, setTo] = useState();
+  const [from, setFrom] = useState("");
+  const [to, setTo] = useState("");
   const [semSant, setSemSant] = useState(false);
   const [semSantD, setSemSantD] = useState(0);
   const [tc, setTC] = useState(false);
@@ -41,10 +41,16 @@ function Tarifas() {
     let dy2 = d2.getDate;
     let Difference_In_Time = d2 - d1;
     let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-    let lowTemp = Difference_In_Days - 62;
     let rDays = Difference_In_Days - dy2;
-    let TA = 0;
-    let TB = 0;
+    let rfDays = Difference_In_Days - 31 - dy2;
+    let rtDays = Difference_In_Days - 62 - dy2;
+
+    const TM1 = 80.25;
+    const TM2 = 74.9;
+    const TM3 = 69.55;
+
+    const TA12 = 96.3;
+    const TA3 = 85.6;
 
     if (where !== "") {
       if (where === "Tienda") {
@@ -54,110 +60,170 @@ function Tarifas() {
       } else if (where === "Caravana") {
         resulto = 7.6 * Difference_In_Days;
       } else if (where === "Bungalow") {
-        if (m1 === 5 && m2 === 8) {
-          if (lowTemp <= 3) {
-            resulto = 85.6 * 62 + lowTemp * 80.25;
-          } else if (3 < lowTemp < 8) {
-            resulto = 85.6 * 62 + lowTemp * 74.9;
-          } else {
-            resulto = 85.6 * 62 + lowTemp * 69.55;
+        if (m1 === m2 || semSant) {
+          if (m1 === 5 || m1 === 8 || semSant) {
+            if (Difference_In_Days < 4) {
+              resulto = TM1 * Difference_In_Days;
+            } else if (Difference_In_Days < 8) {
+              resulto = TM2 * Difference_In_Days;
+            } else {
+              resulto = TM3 * Difference_In_Days;
+            }
+          } else if (5 < m1 < 8) {
+            if (Difference_In_Days < 4) {
+              resulto = TA12 * Difference_In_Days;
+            } else if (Difference_In_Days < 8) {
+              resulto = TA12 * Difference_In_Days;
+            } else {
+              resulto = TA3 * Difference_In_Days;
+            }
           }
         } else if (m1 === 5 && 5 < m2 < 8) {
           if (m2 === 6) {
-            if (dy2 <= 3) {
-              TA = dy2 * 96.3;
-            } else if (3 < d2 < 8) {
-              TA = dy2 * 96.3;
+            if (dy2 < 4) {
+              if (rDays < 4) {
+                resulto = dy2 * TA12 + rDays * TM1;
+              } else if (rDays < 8) {
+                resulto = dy2 * TA12 + rDays * TM2;
+              } else {
+                resulto = dy2 * TA12 + rDays * TM3;
+              }
+            } else if (dy2 < 8) {
+              if (rDays < 4) {
+                resulto = dy2 * TA12 + rDays * TM1;
+              } else if (rDays < 8) {
+                resulto = dy2 * TA12 + rDays * TM2;
+              } else {
+                resulto = dy2 * TA12 + rDays * TM3;
+              }
             } else {
-              TA = dy2 * 85.6;
+              if (rDays < 4) {
+                resulto = dy2 * TA3 + rDays * TM1;
+              } else if (rDays < 8) {
+                resulto = dy2 * TA3 + rDays * TM2;
+              } else {
+                resulto = dy2 * TA3 + rDays * TM3;
+              }
             }
-            if (rDays <= 3) {
-              resulto = TA + rDays * 80.25;
-            } else if (3 < d2 < 8) {
-              resulto = TA + rDays * 74.9;
+          } else if (m2 === 7) {
+            if (dy2 < 4) {
+              if (rfDays < 4) {
+                resulto = dy2 * TA12 + TA3 * 31 + rfDays * TM1;
+              } else if (rfDays < 8) {
+                resulto = dy2 * TA12 + TA3 * 31 + rfDays * TM2;
+              } else {
+                resulto = dy2 * TA12 + TA3 * 31 + rfDays * TM3;
+              }
+            } else if (dy2 < 8) {
+              if (rfDays < 4) {
+                resulto = dy2 * TA12 + TA3 * 31 + rfDays * TM1;
+              } else if (rfDays < 8) {
+                resulto = dy2 * TA12 + TA3 * 31 + rfDays * TM2;
+              } else {
+                resulto = dy2 * TA12 + TA3 * 31 + rfDays * TM3;
+              }
             } else {
-              resulto = TA + rDays * 69.55;
-            }
-          }
-          if (m2 === 7) {
-            if (dy2 <= 3) {
-              TA = dy2 * 96.3 + 31 * 85.6;
-            } else if (3 < d2 < 8) {
-              TA = dy2 * 96.3 + 31 * 85.6;
-            } else {
-              TA = dy2 * 85.6 + 31 * 85.6;
-            }
-            if (rDays <= 3) {
-              resulto = TA + rDays * 80.25;
-            } else if (3 < d2 < 8) {
-              resulto = TA + rDays * 74.9;
-            } else {
-              resulto = TA + rDays * 69.55;
+              if (rfDays < 4) {
+                resulto = dy2 * TA3 + TA3 * 31 + rfDays * TM1;
+              } else if (rfDays < 8) {
+                resulto = dy2 * TA3 + TA3 * 31 + rfDays * TM2;
+              } else {
+                resulto = dy2 * TA3 + TA3 * 31 + rfDays * TM3;
+              }
             }
           }
         } else if (5 < m1 < 8 && m2 === 8) {
           if (m1 === 7) {
-            if (dy2 <= 3) {
-              TB = dy2 * 80.25;
-            } else if (3 < d2 < 8) {
-              TB = dy2 * 74.9;
+            if (dy2 < 4) {
+              if (rDays < 4) {
+                resulto = dy2 * TM1 + rDays * TA12;
+              } else if (rDays < 8) {
+                resulto = dy2 * TM1 + rDays * TA12;
+              } else {
+                resulto = dy2 * TM1 + rDays * TA3;
+              }
+            } else if (dy2 < 8) {
+              if (rDays < 4) {
+                resulto = dy2 * TM2 + rDays * TA12;
+              } else if (rDays < 8) {
+                resulto = dy2 * TM2 + rDays * TA12;
+              } else {
+                resulto = dy2 * TM2 + rDays * TA3;
+              }
             } else {
-              TB = dy2 * 69.55;
+              if (rDays < 4) {
+                resulto = dy2 * TM3 + rDays * TA12;
+              } else if (rDays < 8) {
+                resulto = dy2 * TM3 + rDays * TA12;
+              } else {
+                resulto = dy2 * TM3 + rDays * TA3;
+              }
             }
-            if (rDays <= 3) {
-              resulto = TB + rDays * 96.3;
-            } else if (3 < d2 < 8) {
-              resulto = TB + rDays * 96.3;
+          } else if (m1 === 6) {
+            if (dy2 < 4) {
+              if (rfDays < 4) {
+                resulto = dy2 * TM1 + TA3 * 31 + rfDays * TA12;
+              } else if (rfDays < 8) {
+                resulto = dy2 * TM1 + TA3 * 31 + rfDays * TA12;
+              } else {
+                resulto = dy2 * TM1 + TA3 * 31 + rfDays * TA3;
+              }
+            } else if (dy2 < 8) {
+              if (rfDays < 4) {
+                resulto = dy2 * TM2 + TA3 * 31 + rfDays * TA12;
+              } else if (rfDays < 8) {
+                resulto = dy2 * TM2 + TA3 * 31 + rfDays * TA12;
+              } else {
+                resulto = dy2 * TM2 + TA3 * 31 + rfDays * TA3;
+              }
             } else {
-              resulto = TB + rDays * 85.6;
+              if (rfDays < 4) {
+                resulto = dy2 * TM3 + TA3 * 31 + rfDays * TA12;
+              } else if (rfDays < 8) {
+                resulto = dy2 * TM3 + TA3 * 31 + rfDays * TA12;
+              } else {
+                resulto = dy2 * TM3 + TA3 * 31 + rfDays * TA3;
+              }
             }
           }
-          if (m1 === 6) {
-            if (dy2 <= 3) {
-              TB = dy2 * 80.25 + 31 * 85.6;
-            } else if (3 < dy2 < 8) {
-              TB = dy2 * 74.9 + 31 * 85.6;
-            } else {
-              TB = dy2 * 69.55 + 31 * 85.6;
-            }
-            if (rDays <= 3) {
-              resulto = TB + rDays * 96.3;
-            } else if (3 < d2 < 8) {
-              resulto = TB + rDays * 96.3;
-            } else {
-              resulto = TB + rDays * 96.3;
-            }
-          }
-        } else if (5 < m1 < 8 && 5 < m2 < 8) {
+        } else if (m1 === 6 && m2 === 7) {
           if (Difference_In_Days < 4) {
-            resulto = Difference_In_Days * 80.25;
-          } else if (3 < Difference_In_Days < 8) {
-            resulto = Difference_In_Days * 74.9;
+            resulto = Difference_In_Days * TM1;
+          } else if (Difference_In_Days < 8) {
+            resulto = Difference_In_Days * TM2;
           } else {
-            resulto = Difference_In_Days * 69.55;
+            resulto = Difference_In_Days * TM3;
           }
-        } else if (m1 === m2) {
-          if (5 < m1 < 9) {
-            if (Difference_In_Days < 4) {
-              resulto = Difference_In_Days * 96.3;
-            } else if (Difference_In_Days < 8) {
-              resulto = Difference_In_Days * 96.3;
+        } else if (m1 === 5 && m2 === 8) {
+          if (dy2 < 4) {
+            if (rtDays < 4) {
+              resulto = dy2 * TM1 + TA3 * 62 + rtDays * TM1;
+            } else if (rtDays < 8) {
+              resulto = dy2 * TM1 + TA3 * 62 + rtDays * TM2;
             } else {
-              resulto = Difference_In_Days * 85.6;
+              resulto = dy2 * TM1 + TA3 * 62 + rtDays * TM3;
+            }
+          } else if (dy2 < 8) {
+            if (rtDays < 4) {
+              resulto = dy2 * TM2 + TA3 * 62 + rtDays * TM1;
+            } else if (rtDays < 8) {
+              resulto = dy2 * TM2 + TA3 * 62 + rtDays * TM2;
+            } else {
+              resulto = dy2 * TM2 + TA3 * 62 + rtDays * TM3;
             }
           } else {
-            if (Difference_In_Days < 4) {
-              resulto = Difference_In_Days * 80.25;
-            } else if (Difference_In_Days < 8) {
-              resulto = Difference_In_Days * 74.9;
+            if (rtDays < 4) {
+              resulto = dy2 * TM3 + TA3 * 62 + rtDays * TM1;
+            } else if (rtDays < 8) {
+              resulto = dy2 * TM3 + TA3 * 62 + rtDays * TM2;
             } else {
-              resulto = Difference_In_Days * 69.55;
+              resulto = dy2 * TM3 + TA3 * 62 + rtDays * TM3;
             }
           }
         }
-      } else {
-        alert("Por favor corrija los errores");
       }
+    } else {
+      alert("Por favor corrija los errores");
     }
     setResult(parseFloat(resulto.toFixed(2)));
     console.log(d1.getMonth);
@@ -211,6 +277,7 @@ function Tarifas() {
           />
           <InputNumber
             name="Dias"
+            max="7"
             change={(e) => {
               setSemSantD(e.target.value);
             }}
