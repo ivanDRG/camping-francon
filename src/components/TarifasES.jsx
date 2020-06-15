@@ -36,9 +36,9 @@ function Tarifas() {
     let resulto = 0;
     let d1 = new Date(from);
     let d2 = new Date(to);
-    let m1 = d1.getMonth;
-    let m2 = d2.getMonth;
-    let dy2 = d2.getDate;
+    let m1 = d1.getMonth();
+    let m2 = d2.getMonth();
+    let dy2 = d2.getDate();
     let Difference_In_Time = d2 - d1;
     let Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
     let rDays = Difference_In_Days - dy2;
