@@ -6,6 +6,7 @@ import Calendar from "./CalendarPicker";
 import Select from "./SelectOneES";
 
 function Tarifas() {
+  const [err, setErr] = useState(false);
   const [adultos, setAdultos] = useState(0);
   const [niños, setNiños] = useState(0);
   const [where, setWhere] = useState("");
@@ -52,16 +53,34 @@ function Tarifas() {
     const TA12 = 96.3;
     const TA3 = 85.6;
 
-    if (where !== "") {
+    if (where !== "" && where !== "Escoge uno") {
       if (where === "Tienda") {
-        resulto = 6.8 * Difference_In_Days;
+        if(semSant){
+          resulto = 6.8 * semSantD;
+        }else{
+          resulto = 6.8 * Difference_In_Days;
+        }
       } else if (where === "Autocaravana") {
-        resulto = 12.8 * Difference_In_Days;
+        if(semSant){
+          resulto = 12.8 * semSantD;
+        }else{
+          resulto = 12.8 * Difference_In_Days;
+        }
       } else if (where === "Caravana") {
-        resulto = 7.6 * Difference_In_Days;
+        if(semSant){
+          resulto = 7.6 * semSantD;
+        }else{
+          resulto = 7.6 * Difference_In_Days;
+        }
       } else if (where === "Bungalow") {
         if (m1 === m2 || semSant) {
-          if (m1 === 5 || m1 === 8 || semSant) {
+          if(semSant){
+            if(semSantD < 4){
+              resulto = TM1 * semSantD
+            }else if(semSantD < 8){
+              resulto = TM2 * semSantD
+            }
+          }else if (m1 === 5 || m1 === 8) {
             if (Difference_In_Days < 4) {
               resulto = TM1 * Difference_In_Days;
             } else if (Difference_In_Days < 8) {
@@ -222,8 +241,46 @@ function Tarifas() {
           }
         }
       }
+      if(adultos !== 0){
+        if(semSant){
+          resulto += (adultos * 6.80 * semSantD)
+        }else{
+          resulto += (adultos * 6.80 * Difference_In_Days)
+        }
+        setErr(false)
+      }else{
+        setErr(true)
+      }
+      if(niños !== 0){
+        if(semSant){
+          resulto += (niños * 5.60 * semSantD)
+        }else{
+          resulto += (niños * 5.60 * Difference_In_Days)
+        }
+      }
+      if(car){
+        if(semSant){
+          resulto += (6.80 * semSantD)
+        }else{
+          resulto += (6.80 * Difference_In_Days)
+        }
+      }
+      if(tc){
+        if(semSant){
+          resulto += (5.00 * semSantD)
+        }else{
+          resulto += (5.00 * Difference_In_Days)
+        }
+      }
+      if(moto){
+        if(semSant){
+          resulto += (4.70 * semSantD)
+        }else{
+          resulto += (4.70 * Difference_In_Days)
+        }
+      }
     } else {
-      alert("Por favor corrija los errores");
+      setErr(true)
     }
     setResult(parseFloat(resulto.toFixed(2)));
     console.log(d1.getMonth);
@@ -231,6 +288,9 @@ function Tarifas() {
   return (
     <div className="tarifas">
       <h1> Precios </h1>
+      {err && <div class="alert alert-danger" role="alert">
+    Comprueba que todos los campos estén rellenados correctamente
+    </div>}
       <form action="">
         <div className="">
           <h3>Cuántos sois?</h3>
