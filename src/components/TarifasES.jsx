@@ -55,32 +55,32 @@ function Tarifas() {
 
     if (where !== "" && where !== "Escoge uno") {
       if (where === "Tienda") {
-        if(semSant){
+        if (semSant) {
           resulto = 6.8 * semSantD;
-        }else{
+        } else {
           resulto = 6.8 * Difference_In_Days;
         }
       } else if (where === "Autocaravana") {
-        if(semSant){
+        if (semSant) {
           resulto = 12.8 * semSantD;
-        }else{
+        } else {
           resulto = 12.8 * Difference_In_Days;
         }
       } else if (where === "Caravana") {
-        if(semSant){
+        if (semSant) {
           resulto = 7.6 * semSantD;
-        }else{
+        } else {
           resulto = 7.6 * Difference_In_Days;
         }
       } else if (where === "Bungalow") {
         if (m1 === m2 || semSant) {
-          if(semSant){
-            if(semSantD < 4){
-              resulto = TM1 * semSantD
-            }else if(semSantD < 8){
-              resulto = TM2 * semSantD
+          if (semSant) {
+            if (semSantD < 4) {
+              resulto = TM1 * semSantD;
+            } else if (semSantD < 8) {
+              resulto = TM2 * semSantD;
             }
-          }else if (m1 === 5 || m1 === 8) {
+          } else if (m1 === 5 || m1 === 8) {
             if (Difference_In_Days < 4) {
               resulto = TM1 * Difference_In_Days;
             } else if (Difference_In_Days < 8) {
@@ -241,133 +241,173 @@ function Tarifas() {
           }
         }
       }
-      if(adultos !== 0){
-        if(semSant){
-          resulto += (adultos * 6.80 * semSantD)
-        }else{
-          resulto += (adultos * 6.80 * Difference_In_Days)
+      if (adultos !== 0) {
+        if (semSant) {
+          resulto += adultos * 6.8 * semSantD;
+        } else {
+          resulto += adultos * 6.8 * Difference_In_Days;
         }
-        setErr(false)
-      }else{
-        setErr(true)
+        setErr(false);
+      } else {
+        setErr(true);
       }
-      if(niños !== 0){
-        if(semSant){
-          resulto += (niños * 5.60 * semSantD)
-        }else{
-          resulto += (niños * 5.60 * Difference_In_Days)
-        }
-      }
-      if(car){
-        if(semSant){
-          resulto += (6.80 * semSantD)
-        }else{
-          resulto += (6.80 * Difference_In_Days)
+      if (niños !== 0) {
+        if (semSant) {
+          resulto += niños * 5.6 * semSantD;
+        } else {
+          resulto += niños * 5.6 * Difference_In_Days;
         }
       }
-      if(tc){
-        if(semSant){
-          resulto += (5.00 * semSantD)
-        }else{
-          resulto += (5.00 * Difference_In_Days)
+      if (car) {
+        if (semSant) {
+          resulto += 6.8 * semSantD;
+        } else {
+          resulto += 6.8 * Difference_In_Days;
         }
       }
-      if(moto){
-        if(semSant){
-          resulto += (4.70 * semSantD)
-        }else{
-          resulto += (4.70 * Difference_In_Days)
+      if (tc) {
+        if (semSant) {
+          resulto += 5.0 * semSantD;
+        } else {
+          resulto += 5.0 * Difference_In_Days;
+        }
+      }
+      if (moto) {
+        if (semSant) {
+          resulto += 4.7 * semSantD;
+        } else {
+          resulto += 4.7 * Difference_In_Days;
         }
       }
     } else {
-      setErr(true)
+      setErr(true);
     }
     setResult(parseFloat(resulto.toFixed(2)));
     console.log(d1.getMonth);
   }
   return (
-    <div className="tarifas">
-      <h1> Precios </h1>
-      {err && <div class="alert alert-danger" role="alert">
-    Comprueba que todos los campos estén rellenados correctamente
-    </div>}
-      <form action="">
-        <div className="">
-          <h3>Cuántos sois?</h3>
-          <InputNumber
-            name="adultos"
-            change={(e) => {
-              setAdultos(e.target.value);
-            }}
-          />
-          <InputNumber
-            name="niños"
-            change={(e) => {
-              setNiños(e.target.value);
-            }}
-          />
+    <div className="tarifas whitebg">
+      <div class="container">
+        <div class="py-5 text-center">
+          <h2>Precios</h2>
+          <p class="lead">
+            Below is an example form built entirely with Bootstrap’s form
+            controls. Each required form group has a validation state that can
+            be triggered by attempting to submit the form without completing it.
+          </p>
         </div>
-        <div className="">
-          <h3>En qué os quedais?</h3>
-          <Select
-            change={(e) => {
-              setWhere(e.target.value);
-            }}
-          />
+        {err && (
+          <div class="alert alert-danger" role="alert">
+            Comprueba que todos los campos estén rellenados correctamente
+          </div>
+        )}
+        <div class="row">
+          <div class="col-md-12 order-md-1">
+            <h4 class="mb-3">Billing address</h4>
+            <form action="" class="needs-validation" novalidate="">
+              <div class="row">
+                <InputNumber
+                  name="adultos"
+                  change={(e) => {
+                    setAdultos(e.target.value);
+                  }}
+                />
+                <InputNumber
+                  name="niños"
+                  change={(e) => {
+                    setNiños(e.target.value);
+                  }}
+                />
+              </div>
+              <div class="row">
+                <div class="col-md-4 mb-3">
+                  <Select
+                    change={(e) => {
+                      setWhere(e.target.value);
+                    }}
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <h4>Desde</h4>
+                  <Calendar
+                    change={(e) => {
+                      setFrom(e.target.value);
+                    }}
+                  />
+                </div>
+                <div class="col-md-4 mb-3">
+                  <h4>Hasta</h4>
+                  <Calendar
+                    change={(e) => {
+                      setTo(e.target.value);
+                    }}
+                  />
+                </div>
+              </div>
+              <hr class="mb-4" />
+              <h3>o</h3>
+              <hr class="mb-4" />
+              <div className="row">
+                <div class="custom-control custom-checkbox col-md-6 mb-3">
+                  <h3>Semana Santa</h3>
+                  <CheckBox
+                    type="Semana santa"
+                    change={() => {
+                      setSemSant(!semSant);
+                    }}
+                  />
+                </div>
+                <div class="custom-control custom-checkbox col-md-6 mb-3">
+                  <InputNumber
+                    name="Dias"
+                    max="7"
+                    change={(e) => {
+                      setSemSantD(e.target.value);
+                    }}
+                  />
+                </div>
+              </div>
+              <hr class="mb-4" />
+              <h4 class="mb-3">Extras</h4>
+              <div className="row">
+                <div className="col-md-2 mb-6">
+                  <CheckBox
+                    type="Coche"
+                    change={() => {
+                      setCar(!car);
+                    }}
+                  />
+                </div>
+                <div className="col-md-2 mb-6">
+                  <CheckBox
+                    type="Moto"
+                    change={() => {
+                      setMoto(!moto);
+                    }}
+                  />
+                </div>
+                <div className="col-md-2 mb-6">
+                  <CheckBox
+                    type="Toma de corriente"
+                    change={() => {
+                      setTC(!tc);
+                    }}
+                  />
+                </div>
+              </div>
+              <hr class="mb-4" />
+              <h4 className="form-control">{result}</h4>
+              <button
+                class="btn btn-primary btn-lg btn-block"
+                type="button"
+                onClick={calc}
+              >
+                Calcular el precio final
+              </button>
+            </form>
+          </div>
         </div>
-        <div className="">
-          <h4>Desde</h4>
-          <Calendar
-            change={(e) => {
-              setFrom(e.target.value);
-            }}
-          />
-          <h4>Hasta</h4>
-          <Calendar
-            change={(e) => {
-              setTo(e.target.value);
-            }}
-          />
-          <h3>Semana Santa</h3>
-          <CheckBox
-            type="Semana santa"
-            change={() => {
-              setSemSant(!semSant);
-            }}
-          />
-          <InputNumber
-            name="Dias"
-            max="7"
-            change={(e) => {
-              setSemSantD(e.target.value);
-            }}
-          />
-        </div>
-        <div>
-          <CheckBox
-            type="Coche"
-            change={() => {
-              setCar(!car);
-            }}
-          />
-          <CheckBox
-            type="Moto"
-            change={() => {
-              setMoto(!moto);
-            }}
-          />
-          <CheckBox
-            type="Toma de corriente"
-            change={() => {
-              setTC(!tc);
-            }}
-          />
-        </div>
-        <button class="btn btn-primary" type="button" onClick={calc}>
-          Calcular
-        </button>
-      </form>
-      <h4 className="form-control">{result}</h4>
+      </div>
     </div>
   );
 }
