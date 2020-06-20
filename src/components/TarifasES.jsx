@@ -286,7 +286,7 @@ function Tarifas() {
     console.log(d1.getMonth);
   }
   return (
-    <div className="tarifas whitebg">
+    <div id="Tarifas" className="tarifas whitebg">
       <div class="container">
         <div class="py-5 text-center">
           <h2>Precios</h2>
@@ -303,7 +303,7 @@ function Tarifas() {
         )}
         <div class="row">
           <div class="col-md-12 order-md-1">
-            <h4 class="mb-3">Billing address</h4>
+            <h4 class="mb-3">Calculador de precios</h4>
             <form action="" class="needs-validation" novalidate="">
               <div class="row">
                 <InputNumber

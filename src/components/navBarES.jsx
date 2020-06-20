@@ -1,10 +1,30 @@
 import React from "react";
 import logo from "./images/logo.png";
+import { Link } from "react-scroll";
 
 function NavBar() {
+  var prevScrollpos = window.pageYOffset;
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    if (prevScrollpos > currentScrollPos) {
+      document.getElementById("navbar").style.top = "0";
+    } else {
+      document.getElementById("navbar").style.top = "-70px";
+    }
+    prevScrollpos = currentScrollPos;
+  };
   return (
-    <nav class=" navbar navbar-expand-lg sticky-top navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav
+      id="navbar"
+      class=" navbar navbar-expand-lg sticky-top navbar-light bg-light"
+    >
+      <Link
+        smooth={true}
+        duration={1000}
+        to="Home"
+        class="navbar-brand"
+        href="#"
+      >
         <img
           src={logo}
           width="40"
@@ -13,7 +33,7 @@ function NavBar() {
           alt=""
           loading="lazy"
         />
-      </a>
+      </Link>
       <button
         class="navbar-toggler"
         type="button"
@@ -27,29 +47,70 @@ function NavBar() {
       </button>
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
-            </a>
+          <li class="nav-item active"></li>
+          <li class="nav-item">
+            <Link
+              className="nav-link link"
+              to="About"
+              smooth={true}
+              duration={1000}
+            >
+              Sobre nosotros
+            </Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              Features
-            </a>
+            <Link
+              className="nav-link link"
+              to="Features"
+              smooth={true}
+              duration={1000}
+            >
+              Servicios
+            </Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
-              Pricing
-            </a>
+            <Link
+              className="nav-link link"
+              to="Location"
+              smooth={true}
+              duration={1000}
+            >
+              Donde encontrarnos
+            </Link>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="#" tabindex="-1" aria-disabled="true">
-              Disabled
-            </a>
+            <Link
+              className="nav-link link"
+              to="Galery"
+              smooth={true}
+              duration={1000}
+            >
+              Galería
+            </Link>
+          </li>
+          <li class="nav-item">
+            <Link
+              className="nav-link link"
+              to="Tarifas"
+              smooth={true}
+              duration={1000}
+            >
+              Precios
+            </Link>
+          </li>
+          <li class="nav-item">
+            <Link
+              className="nav-link link"
+              to="Contactos"
+              smooth={true}
+              duration={1000}
+            >
+              Contacto
+            </Link>
           </li>
           <li class="nav-item dropdown">
             <a
-              class="nav-link dropdown-toggle"
+              className="nav-link dropdown-toggle"
               href="#"
               id="navbarDropdown"
               role="button"

@@ -5,13 +5,16 @@
   outline: none !important;
 }
 body {
-  background-image: url("./components/images/homeimage1.jpg");
+  background-image: url("./components/images/homeimage2.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
 h1 {
   font-family: "Rubik", sans-serif;
+}
+#navbar {
+  transition: top 0.3s;
 }
 .whitebg {
   background-color: #e4e2e2;
@@ -35,7 +38,7 @@ h1 {
   margin: 0;
   border: none;
 }
-.Title{
+.Title {
   margin-top: 1rem;
 }
 .homeTitle {
@@ -113,9 +116,11 @@ h1 {
 .aboutContainer {
   background-color: #cfcaca;
   padding: 2vh 0;
+  min-height: 100vh;
 }
 .relative {
   position: relative;
+  margin-top: 5%;
 }
 .marginBottom {
   margin-bottom: 0.5rem;
@@ -163,4 +168,26 @@ h1 {
 .tarifas {
   min-height: 100vh;
   height: auto;
+  padding-bottom: 5rem;
+}
+.contactos {
+  background-color: #4d3e3e;
+  color: #f8f8f8;
+  min-height: 40vh;
+  padding-top: 2 rem;
+  text-align: center;
+}
+.contactosk {
+  margin: auto;
+}
+.icon {
+  color: #f8f8f8;
+  width: auto !important;
+  height: 3rem !important;
+}
+.copyright {
+  margin-top: auto;
+}
+.link:hover {
+  cursor: pointer;
 }
