@@ -3,7 +3,7 @@ import React from "react";
 function SelectOne(props) {
   return (
     <div>
-      <label for="state">State</label>
+      <label for="state">Dónde</label>
       <select
         class="custom-select d-block w-100 form-control"
         id="inputState"

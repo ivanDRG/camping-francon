@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./images/logo.png";
 import { Link } from "react-scroll";
 
-function NavBar() {
+function NavBar(props) {
   var prevScrollpos = window.pageYOffset;
   window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
@@ -121,20 +121,20 @@ function NavBar() {
               Idioma
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
+              <a name="Galego" onClick={props.changeLanguage} class="dropdown-item" href="#">
                 Galego
               </a>
-              <a class="dropdown-item" href="#">
+              <a name="English" onClick={props.changeLanguage} class="dropdown-item" href="#">
                 English
               </a>
-              <a class="dropdown-item" href="#">
+              <a name="Français" onClick={props.changeLanguage} class="dropdown-item" href="#">
                 Français
               </a>
-              <a class="dropdown-item" href="#">
-                português
+              <a name="Português" onClick={props.changeLanguage} class="dropdown-item" href="#">
+                Português
               </a>
               <div class="dropdown-divider" />
-              <a class="dropdown-item" href="#">
+              <a name="Español" onClick={props.changeLanguage} class="dropdown-item" href="#">
                 Español
               </a>
             </div>
