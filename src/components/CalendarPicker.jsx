@@ -9,7 +9,7 @@ function Calendar(props) {
 
   return (
     <input
-      className="custom-select d-block w-100 form-control"
+      className=" d-block w-100 form-control"
       type="date"
       id="start"
       name="trip-start"

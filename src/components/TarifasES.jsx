@@ -12,8 +12,6 @@ function Tarifas() {
   const [where, setWhere] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
-  const [semSant, setSemSant] = useState(false);
-  const [semSantD, setSemSantD] = useState(0);
   const [tc, setTC] = useState(false);
   const [car, setCar] = useState(false);
   const [moto, setMoto] = useState(false);
@@ -26,8 +24,6 @@ function Tarifas() {
     where,
     from,
     to,
-    semSant,
-    semSantD,
     car,
     moto,
     tc
@@ -55,32 +51,14 @@ function Tarifas() {
 
     if (where !== "" && where !== "Escoge uno") {
       if (where === "Tienda") {
-        if (semSant) {
-          resulto = 6.8 * semSantD;
-        } else {
-          resulto = 6.8 * Difference_In_Days;
-        }
+        resulto = 6.8 * Difference_In_Days;
       } else if (where === "Autocaravana") {
-        if (semSant) {
-          resulto = 12.8 * semSantD;
-        } else {
-          resulto = 12.8 * Difference_In_Days;
-        }
+        resulto = 12.8 * Difference_In_Days;
       } else if (where === "Caravana") {
-        if (semSant) {
-          resulto = 7.6 * semSantD;
-        } else {
-          resulto = 7.6 * Difference_In_Days;
-        }
+        resulto = 7.6 * Difference_In_Days;
       } else if (where === "Bungalow") {
-        if (m1 === m2 || semSant) {
-          if (semSant) {
-            if (semSantD < 4) {
-              resulto = TM1 * semSantD;
-            } else if (semSantD < 8) {
-              resulto = TM2 * semSantD;
-            }
-          } else if (m1 === 5 || m1 === 8) {
+        if (m1 === m2) {
+          if (m1 === 5 || m1 === 8) {
             if (Difference_In_Days < 4) {
               resulto = TM1 * Difference_In_Days;
             } else if (Difference_In_Days < 8) {
@@ -242,42 +220,22 @@ function Tarifas() {
         }
       }
       if (adultos !== 0) {
-        if (semSant) {
-          resulto += adultos * 6.8 * semSantD;
-        } else {
-          resulto += adultos * 6.8 * Difference_In_Days;
-        }
+        resulto += adultos * 6.8 * Difference_In_Days;
         setErr(false);
       } else {
         setErr(true);
       }
       if (niños !== 0) {
-        if (semSant) {
-          resulto += niños * 5.6 * semSantD;
-        } else {
-          resulto += niños * 5.6 * Difference_In_Days;
-        }
+        resulto += niños * 5.6 * Difference_In_Days;
       }
       if (car) {
-        if (semSant) {
-          resulto += 6.8 * semSantD;
-        } else {
-          resulto += 6.8 * Difference_In_Days;
-        }
+        resulto += 6.8 * Difference_In_Days;
       }
       if (tc) {
-        if (semSant) {
-          resulto += 5.0 * semSantD;
-        } else {
-          resulto += 5.0 * Difference_In_Days;
-        }
+        resulto += 5.0 * Difference_In_Days;
       }
       if (moto) {
-        if (semSant) {
-          resulto += 4.7 * semSantD;
-        } else {
-          resulto += 4.7 * Difference_In_Days;
-        }
+        resulto += 4.7 * Difference_In_Days;
       }
     } else {
       setErr(true);
@@ -291,9 +249,7 @@ function Tarifas() {
         <div class="py-5 text-center">
           <h2>Precios</h2>
           <p class="lead">
-            Below is an example form built entirely with Bootstrap’s form
-            controls. Each required form group has a validation state that can
-            be triggered by attempting to submit the form without completing it.
+            Calcula el precio de tu estancia de una forma rápida y sencilla, si quieres saber el precio durante SEMANA SANTA llama al teléfono +34 654 452 245 y pregunta las tarifas.
           </p>
         </div>
         {err && (
@@ -345,28 +301,6 @@ function Tarifas() {
                 </div>
               </div>
               <hr class="mb-4" />
-              <h3>o</h3>
-              <hr class="mb-4" />
-              <div className="row">
-                <div class="custom-control custom-checkbox col-md-6 mb-3">
-                  <h3>Semana Santa</h3>
-                  <CheckBox
-                    type="Semana santa"
-                    change={() => {
-                      setSemSant(!semSant);
-                    }}
-                  />
-                </div>
-                <div class="custom-control custom-checkbox col-md-6 mb-3">
-                  <InputNumber
-                    name="Dias"
-                    max="7"
-                    change={(e) => {
-                      setSemSantD(e.target.value);
-                    }}
-                  />
-                </div>
-              </div>
               <hr class="mb-4" />
               <h4 class="mb-3">Extras</h4>
               <div className="row">
@@ -396,7 +330,6 @@ function Tarifas() {
                 </div>
               </div>
               <hr class="mb-4" />
-              <h4 className="form-control">{result}</h4>
               <button
                 class="btn btn-primary btn-lg btn-block"
                 type="button"
@@ -404,6 +337,8 @@ function Tarifas() {
               >
                 Calcular el precio final
               </button>
+              <h4 className="form-control">{result}</h4>
+
             </form>
           </div>
         </div>
