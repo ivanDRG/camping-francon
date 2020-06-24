@@ -6,7 +6,7 @@ import Home from "./components/HomeES.jsx";
 import About from "./components/AboutES";
 import Features from "./components/FeaturesES";
 import Location from "./components/LocationES";
-import Galery from "./components/GaleryES";
+import Bungalows from "./components/BungalowsES";
 import Tarifas from "./components/TarifasES";
 import Contactos from "./components/ContactosES";
 /** Inglés */
@@ -15,7 +15,7 @@ import HomeEN from "./components/HomeEN.jsx";
 import AboutEN from "./components/AboutEN";
 import FeaturesEN from "./components/FeaturesEN";
 import LocationEN from "./components/LocationEN";
-import GaleryEN from "./components/GaleryEN";
+import BungalowsEN from "./components/BungalowsEN";
 import TarifasEN from "./components/TarifasEN";
 import ContactosEN from "./components/ContactosEN";
 
@@ -35,9 +35,9 @@ export default function App() {
         }} />
         <Home />
         <About />
+        <Bungalows />
         <Features />
         <Location />
-        <Galery />
         <Tarifas />
         <Contactos />
       </div>
@@ -54,9 +54,9 @@ export default function App() {
         }} />
         <HomeEN />
         <AboutEN />
+        <BungalowsEN />
         <FeaturesEN />
         <LocationEN />
-        <GaleryEN />
         <TarifasEN />
         <ContactosEN />
       </div>

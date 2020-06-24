@@ -160,6 +160,9 @@ h1 {
   background-color: rgb(53, 53, 53);
   color: #f8f8f8;
 }
+.galery ul{
+  text-align: left !important;
+}
 .galery img {
   width: 50vw !important;
   margin: auto;
@@ -191,3 +194,9 @@ h1 {
 .link:hover {
   cursor: pointer;
 }
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  transition: 0.3s;
+}
+

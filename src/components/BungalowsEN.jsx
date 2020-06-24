@@ -6,9 +6,9 @@ import photo4 from "./images/carousel/photo4.jpg";
 import photo5 from "./images/carousel/photo5.jpg";
 import "../styles.css";
 
-function Galery() {
+function Bungalow() {
     return (
-        <div id="Galery" className="galery">
+        <div id="Bungalows" className="galery">
             <h1>Galery</h1>
             <div
                 id="carouselExampleFade"
@@ -55,4 +55,4 @@ function Galery() {
     );
 }
 
-export default Galery;
+export default Bungalow;

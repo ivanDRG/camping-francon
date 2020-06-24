@@ -61,6 +61,16 @@ function NavBar(props) {
                     <li class="nav-item">
                         <Link
                             className="nav-link link"
+                            to="Bungalows"
+                            smooth={true}
+                            duration={1000}
+                        >
+                            Bungalows
+            </Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link
+                            className="nav-link link"
                             to="Features"
                             smooth={true}
                             duration={1000}
@@ -76,16 +86,6 @@ function NavBar(props) {
                             duration={1000}
                         >
                             Where to find us
-            </Link>
-                    </li>
-                    <li class="nav-item">
-                        <Link
-                            className="nav-link link"
-                            to="Galery"
-                            smooth={true}
-                            duration={1000}
-                        >
-                            Galery
             </Link>
                     </li>
                     <li class="nav-item">
