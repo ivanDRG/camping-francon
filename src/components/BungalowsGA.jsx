@@ -16,19 +16,19 @@ function Bungalow() {
             <div className="col-12 col-md-4">
                 <h1>Bungalows</h1>
                 <ul>
-                    <li style={{ marginBottom: 7 }}>Fully equipped for 4 people. Bedroom with large bed, bedroom with 2 twin beds, living room-kitchen with refrigerator and bathroom with shower.</li>
-                    <li style={{ marginBottom: 7 }}>Weekly change of bed linen and towels.</li>
-                    <li style={{ marginBottom: 7 }}>Bungalows with parking for one vehicle</li>
-                    <li style={{ marginBottom: 7 }}>Terrace with table and chairs</li>
+                    <li style={{ marginBottom: 7 }}>Completamente equipado para 4 persoas, habitación con cama de matrimonio, habitación con camas xemelgas, sala de estar, cocina con nevera e baño con ducha.</li>
+                    <li style={{ marginBottom: 7 }}>Cambio de roupa de cama e toallas semanal</li>
+                    <li style={{ marginBottom: 7 }}>Bungalows con parking para un vehículo</li>
+                    <li style={{ marginBottom: 7 }}>Terraza con mesa e sillas</li>
                     <br />
-                    <p>Bungalow entrance time:     16:00</p>
-                    <p>Time of departure:     12:00</p>
-                    <p>Minimum stay of bungalows:</p>
-                    <p style={{ marginTop: 0, marginBottom: 0 }}>Easter : 4 nights</p>
-                    <p style={{ marginTop: 0, marginBottom: 0 }}>July and August: 7 nights from Saturday to Saturday</p>
-                    <p style={{ marginTop: 0, marginBottom: 0 }}>June and September: 2 nights</p>
+                    <p>Hora de entrada:     16:00</p>
+                    <p>Hora de saída:     12:00</p>
+                    <p>Estancia mínima nos bungalows:</p>
+                    <p style={{ marginTop: 0, marginBottom: 0 }}>Semana Santa : 4 noches</p>
+                    <p style={{ marginTop: 0, marginBottom: 0 }}>Xullo e agosto: 7 noites de sábado a sábado</p>
+                    <p style={{ marginTop: 0, marginBottom: 0 }}>Xuño e Setembro: 2 noites</p>
 
-                    <p>RESERVATIONS ARE RECOMMENDED</p>
+                    <p>RECOMENDASE FACER RESERVA</p>
                 </ul>
             </div>
             <div

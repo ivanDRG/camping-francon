@@ -16,23 +16,19 @@ function Bungalow() {
       <div className="col-12 col-md-4">
         <h1>Bungalows</h1>
         <ul>
-          <li>Totalmente equipados para 4 personas. Habitación con cama grande, habitación con 2 camas gemelas, salón-cocina con frigorífico y baño con ducha.</li>
-          <li>Cambio de ropa de cama y toallas semanal.</li>
-          <li>Bungalows con parking para un vehículo</li>
-          <li>Terraza con mesa y sillas</li>
+          <li style={{ marginBottom: 7 }}>Completamente equipado para 4 personas, habitación con cama de matrimonio, habitación con camas gemelas, sala de estar, cocina con nevera y baño con ducha.</li>
+          <li style={{ marginBottom: 7 }}>Cambio de ropa de cama y toallas semanal</li>
+          <li style={{ marginBottom: 7 }}>Bungalows con parking para un vehículo</li>
+          <li style={{ marginBottom: 7 }}>Terraza con mesa y sillas</li>
           <br />
-          <br />
-          <p>Hora de entrada de bungalows: </p>
-          <p>16:00 </p>
-          <p>Hora de salida:</p>
-          <p>12:00</p>
-          <p>
-            Estancia mínima de bungalows:
-            Semana Santa : 4 noches
-            Julio y Agosto: 7 noches de sábado a sábado
-            Junio y Septiembre: 2 noches
+          <p>Hora de entrada:     16:00</p>
+          <p>Hora de salida:     12:00</p>
+          <p>Esrancia mínima:</p>
+          <p style={{ marginTop: 0, marginBottom: 0 }}>Semana Santa : 4 noches</p>
+          <p style={{ marginTop: 0, marginBottom: 0 }}>Julio y Agosto: 7 noches de sábado a sábado</p>
+          <p style={{ marginTop: 0, marginBottom: 0 }}>Junio y Septiembre: 2 noches</p>
 
-SE RECOMIENDA HACER RESERVA</p>
+          <p>SE RECOMIENDA HACER RESERVA</p>
         </ul>
       </div>
       <div

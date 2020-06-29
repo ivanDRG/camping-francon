@@ -3,7 +3,7 @@ import "../styles.css";
 import InputNumber from "./InputNumber";
 import CheckBox from "./CheckBox";
 import Calendar from "./CalendarPicker";
-import Select from "./SelectOneEN";
+import Select from "./SelectOneES";
 
 function Tarifas() {
     const [err, setErr] = useState(false);
@@ -16,7 +16,7 @@ function Tarifas() {
     const [car, setCar] = useState(false);
     const [moto, setMoto] = useState(false);
     const [result, setResult] = useState(
-        "Click the button to see the final price"
+        "Clickea o botón para revelar o prezo final"
     );
     console.log(
         niños,
@@ -49,12 +49,12 @@ function Tarifas() {
         const TA12 = 96.3;
         const TA3 = 85.6;
 
-        if (where !== "" && where !== "Select one") {
-            if (where === "Tent") {
+        if (where !== "" && where !== "Escoge uno") {
+            if (where === "Tienda") {
                 resulto = 6.8 * Difference_In_Days;
-            } else if (where === "Motorhome") {
+            } else if (where === "Autocaravana") {
                 resulto = 12.8 * Difference_In_Days;
-            } else if (where === "Caravan") {
+            } else if (where === "Caravana") {
                 resulto = 7.6 * Difference_In_Days;
             } else if (where === "Bungalow") {
                 if (m1 === m2) {
@@ -247,29 +247,30 @@ function Tarifas() {
         <div id="Tarifas" className="tarifas whitebg">
             <div class="container">
                 <div class="py-5 text-center">
-                    <h2>Prices</h2>
+                    <h2>Prezos</h2>
                     <p class="lead">
-                        Calculate the price of your stay in a quick and easy way, if you want to know the price during </p>
-                    <p className="lead"> Easter call +34 654 452 245 and ask for the rates.</p>
+                        Calcula o prezo da tua estancia dunha forma rápida e sencilla, se queres saber o prezo durante </p>
+                    <p className="lead"> SEMANA SANTA chama ao teléfono +34 654 452 245 e pregunta as tarifas.
+          </p>
                 </div>
                 {err && (
                     <div class="alert alert-danger" role="alert">
-                        Check that all fields are filled in correctly
+                        Comproba que todolos campos estén recheos correctamente
                     </div>
                 )}
                 <div class="row">
                     <div class="col-md-12 order-md-1">
-                        <h4 class="mb-3">Price calculator</h4>
+                        <h4 class="mb-3">Calculador de precios</h4>
                         <form action="" class="needs-validation" novalidate="">
                             <div class="row">
                                 <InputNumber
-                                    name="Adults"
+                                    name="adultos"
                                     change={(e) => {
                                         setAdultos(e.target.value);
                                     }}
                                 />
                                 <InputNumber
-                                    name="Children"
+                                    name="nenos"
                                     change={(e) => {
                                         setNiños(e.target.value);
                                     }}
@@ -284,7 +285,7 @@ function Tarifas() {
                                     />
                                 </div>
                                 <div class="col-md-4 mb-3">
-                                    <h4>From</h4>
+                                    <h4>Dende</h4>
                                     <Calendar
                                         change={(e) => {
                                             setFrom(e.target.value);
@@ -292,7 +293,7 @@ function Tarifas() {
                                     />
                                 </div>
                                 <div class="col-md-4 mb-3">
-                                    <h4>Till</h4>
+                                    <h4>Ata</h4>
                                     <Calendar
                                         change={(e) => {
                                             setTo(e.target.value);
@@ -335,7 +336,7 @@ function Tarifas() {
                                 type="button"
                                 onClick={calc}
                             >
-                                Calculating the final price
+                                Calcular o prezo final
               </button>
                             <h4 className="form-control">{result}</h4>
 

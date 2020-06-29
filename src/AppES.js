@@ -18,6 +18,15 @@ import LocationEN from "./components/LocationEN";
 import BungalowsEN from "./components/BungalowsEN";
 import TarifasEN from "./components/TarifasEN";
 import ContactosEN from "./components/ContactosEN";
+/** Gallego */
+import NavBarGA from "./components/NavbarGA.jsx";
+import HomeGA from "./components/HomeGA.jsx";
+import AboutGA from "./components/AboutGA";
+import FeaturesGA from "./components/FeaturesGA";
+import LocationGA from "./components/LocationGA";
+import BungalowsGA from "./components/BungalowsGA";
+import TarifasGA from "./components/TarifasGA";
+import ContactosGA from "./components/ContactosGA";
 
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
@@ -59,6 +68,25 @@ export default function App() {
         <LocationEN />
         <TarifasEN />
         <ContactosEN />
+      </div>
+    );
+  } else if (language === "Galego") {
+    return (
+      <div className="App">
+        <ScrollUpButton
+          style={{ backgroundColor: "transparent", bottom: "3rem" }}
+          AnimationDuration={1000}
+        />
+        <NavBarGA changeLanguage={(e) => {
+          setLanguage(e.target.name);
+        }} />
+        <HomeGA />
+        <AboutGA />
+        <BungalowsGA />
+        <FeaturesGA />
+        <LocationGA />
+        <TarifasGA />
+        <ContactosGA />
       </div>
     );
   }

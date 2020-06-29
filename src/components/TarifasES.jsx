@@ -249,7 +249,8 @@ function Tarifas() {
         <div class="py-5 text-center">
           <h2>Precios</h2>
           <p class="lead">
-            Calcula el precio de tu estancia de una forma rápida y sencilla, si quieres saber el precio durante SEMANA SANTA llama al teléfono +34 654 452 245 y pregunta las tarifas.
+            Calcula el precio de tu estancia de una forma rápida y sencilla, si quieres saber el precio durante </p>
+          <p class="lead"> SEMANA SANTA llama al teléfono +34 654 452 245 y pregunta las tarifas.
           </p>
         </div>
         {err && (
