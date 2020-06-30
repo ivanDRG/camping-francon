@@ -7,31 +7,31 @@ import AirlineSeatIndividualSuiteIcon from "@material-ui/icons/AirlineSeatIndivi
 function Features() {
     return (
         <div id="Features" className="Features">
-            <h1>What we offer?</h1>
-            <p>Bringing together the best of the coast and the countryside in one place</p>
+            <h1>Ce que nous offrons?</h1>
+            <p>Réunir le meilleur de la côte et de la campagne en un seul endroit</p>
             <div className="row noMargin">
                 <div className="col-12 col-md-4">
                     <WeekendIcon />
-                    <h3>Comfort</h3>
+                    <h3>Confort</h3>
                     <p>
-                        It has all kinds of amenities, such as access to electric light,
-                        restaurant and showers to make you feel like at home.
+                        Il dispose de toutes sortes d'équipements, tels que l'accès à la lumière électrique,
+                        restaurant et douches pour vous faire sentir comme chez vous.
           </p>
                 </div>
                 <div className="col-12 col-md-4">
                     <BeachAccessIcon />
                     <h3>Leisure</h3>
                     <p>
-                        Enjoy one of the best beaches in the estuary with direct access
-                        from the campsite.
+                        Profitez d'une des plus belles plages de l'estuaire avec un accès direct
+                        du camping.
           </p>
                 </div>
                 <div className="col-12 col-md-4">
                     <AirlineSeatIndividualSuiteIcon />
-                    <h3>Tranquility</h3>
+                    <h3>Tranquillité</h3>
                     <p>
-                        Take advantage of the peace and quiet of the campsite during your
-                        stay.
+                        Profitez du calme et de la tranquillité du camping lors de votre
+                        rester.
           </p>
                 </div>
             </div>

@@ -27,6 +27,15 @@ import LocationGA from "./components/LocationGA";
 import BungalowsGA from "./components/BungalowsGA";
 import TarifasGA from "./components/TarifasGA";
 import ContactosGA from "./components/ContactosGA";
+/** Francés */
+import NavBarFR from "./components/navBarFR.jsx";
+import HomeFR from "./components/HomeFR.jsx";
+import AboutFR from "./components/AboutFR";
+import FeaturesFR from "./components/FeaturesFR";
+import LocationFR from "./components/LocationFR";
+import BungalowsFR from "./components/BungalowsFR";
+import TarifasFR from "./components/TarifasFR";
+import ContactosFR from "./components/ContactosFR";
 
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
@@ -87,6 +96,25 @@ export default function App() {
         <LocationGA />
         <TarifasGA />
         <ContactosGA />
+      </div>
+    );
+  } else if (language === "Français") {
+    return (
+      <div className="App">
+        <ScrollUpButton
+          style={{ backgroundColor: "transparent", bottom: "3rem" }}
+          AnimationDuration={1000}
+        />
+        <NavBarFR changeLanguage={(e) => {
+          setLanguage(e.target.name);
+        }} />
+        <HomeFR />
+        <AboutFR />
+        <BungalowsFR />
+        <FeaturesFR />
+        <LocationFR />
+        <TarifasFR />
+        <ContactosFR />
       </div>
     );
   }
