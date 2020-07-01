@@ -55,7 +55,7 @@ function NavBar(props) {
               smooth={true}
               duration={1000}
             >
-              About Us
+              Sobre nós
             </Link>
           </li>
           <li class="nav-item">
@@ -75,7 +75,7 @@ function NavBar(props) {
               smooth={true}
               duration={1000}
             >
-              Services
+              Serviços
             </Link>
           </li>
           <li class="nav-item">
@@ -85,7 +85,7 @@ function NavBar(props) {
               smooth={true}
               duration={1000}
             >
-              Where to find us
+              Onde nos encontrar
             </Link>
           </li>
           <li class="nav-item">
@@ -95,7 +95,7 @@ function NavBar(props) {
               smooth={true}
               duration={1000}
             >
-              Prices
+              Preços
             </Link>
           </li>
           <li class="nav-item">
@@ -105,7 +105,7 @@ function NavBar(props) {
               smooth={true}
               duration={1000}
             >
-              Contact
+              Contato
             </Link>
           </li>
           <li class="nav-item dropdown">
@@ -118,7 +118,7 @@ function NavBar(props) {
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Language
+              Idioma
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a

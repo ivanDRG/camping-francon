@@ -36,11 +36,20 @@ import LocationFR from "./components/LocationFR";
 import BungalowsFR from "./components/BungalowsFR";
 import TarifasFR from "./components/TarifasFR";
 import ContactosFR from "./components/ContactosFR";
+/** Inglés */
+import NavBarPO from "./components/navBarPO.jsx";
+import HomePO from "./components/HomePO.jsx";
+import AboutPO from "./components/AboutPO";
+import FeaturesPO from "./components/FeaturesPO";
+import LocationPO from "./components/LocationPO";
+import BungalowsPO from "./components/BungalowsPO";
+import TarifasPO from "./components/TarifasPO";
+import ContactosPO from "./components/ContactosPO";
 
 import { TinyButton as ScrollUpButton } from "react-scroll-up-button";
 
 export default function App() {
-  const [language, setLanguage] = useState("Español")
+  const [language, setLanguage] = useState("Español");
   if (language === "Español") {
     return (
       <div className="App">
@@ -48,9 +57,11 @@ export default function App() {
           style={{ backgroundColor: "transparent", bottom: "3rem" }}
           AnimationDuration={1000}
         />
-        <NavBar changeLanguage={(e) => {
-          setLanguage(e.target.name);
-        }} />
+        <NavBar
+          changeLanguage={(e) => {
+            setLanguage(e.target.name);
+          }}
+        />
         <Home />
         <About />
         <Bungalows />
@@ -67,9 +78,11 @@ export default function App() {
           style={{ backgroundColor: "transparent", bottom: "3rem" }}
           AnimationDuration={1000}
         />
-        <NavBarEN changeLanguage={(e) => {
-          setLanguage(e.target.name);
-        }} />
+        <NavBarEN
+          changeLanguage={(e) => {
+            setLanguage(e.target.name);
+          }}
+        />
         <HomeEN />
         <AboutEN />
         <BungalowsEN />
@@ -86,9 +99,11 @@ export default function App() {
           style={{ backgroundColor: "transparent", bottom: "3rem" }}
           AnimationDuration={1000}
         />
-        <NavBarGA changeLanguage={(e) => {
-          setLanguage(e.target.name);
-        }} />
+        <NavBarGA
+          changeLanguage={(e) => {
+            setLanguage(e.target.name);
+          }}
+        />
         <HomeGA />
         <AboutGA />
         <BungalowsGA />
@@ -105,9 +120,11 @@ export default function App() {
           style={{ backgroundColor: "transparent", bottom: "3rem" }}
           AnimationDuration={1000}
         />
-        <NavBarFR changeLanguage={(e) => {
-          setLanguage(e.target.name);
-        }} />
+        <NavBarFR
+          changeLanguage={(e) => {
+            setLanguage(e.target.name);
+          }}
+        />
         <HomeFR />
         <AboutFR />
         <BungalowsFR />
@@ -117,6 +134,26 @@ export default function App() {
         <ContactosFR />
       </div>
     );
+  } else if (language === "Português") {
+    return (
+      <div className="App">
+        <ScrollUpButton
+          style={{ backgroundColor: "transparent", bottom: "3rem" }}
+          AnimationDuration={1000}
+        />
+        <NavBarPO
+          changeLanguage={(e) => {
+            setLanguage(e.target.name);
+          }}
+        />
+        <HomePO />
+        <AboutPO />
+        <BungalowsPO />
+        <FeaturesPO />
+        <LocationPO />
+        <TarifasPO />
+        <ContactosPO />
+      </div>
+    );
   }
-
 }

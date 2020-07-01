@@ -16,30 +16,30 @@ function Bungalow() {
         <h1>Bungalows</h1>
         <ul>
           <li style={{ marginBottom: 7 }}>
-            Fully equipped for 4 people. Bedroom with large bed, bedroom with 2
-            twin beds, living room-kitchen with refrigerator and bathroom with
-            shower.
+            Totalmente equipado para 4 pessoas. Quarto com cama grande, quarto
+            com 2 camas gémeas, sala de estar-cozinha com frigorífico e casa de
+            banho com chuveiro.
           </li>
           <li style={{ marginBottom: 7 }}>
-            Weekly change of bed linen and towels.
+            Mudança semanal de roupa de cama e toalhas.
           </li>
           <li style={{ marginBottom: 7 }}>
-            Bungalows with parking for one vehicle
+            Bungalows com estacionamento para um veículo
           </li>
-          <li style={{ marginBottom: 7 }}>Terrace with table and chairs</li>
+          <li style={{ marginBottom: 7 }}>Terraço com mesa e cadeiras</li>
           <br />
-          <p>Bungalow entrance time: 16:00</p>
-          <p>Time of departure: 12:00</p>
-          <p>Minimum stay of bungalows:</p>
-          <p style={{ marginTop: 0, marginBottom: 0 }}>Easter : 4 nights</p>
+          <p>Horário de entrada do bungalow: 16:00</p>
+          <p>Hora de partida: 12:00</p>
+          <p>Estadia mínima dos bungalows:</p>
+          <p style={{ marginTop: 0, marginBottom: 0 }}>Páscoa : 4 noites</p>
           <p style={{ marginTop: 0, marginBottom: 0 }}>
-            July and August: 7 nights from Saturday to Saturday
+            Julho e Agosto: 7 noites de sábado a sábado
           </p>
           <p style={{ marginTop: 0, marginBottom: 0 }}>
-            June and September: 2 nights
+            Junho e Setembro: 2 noites
           </p>
-          <br/>
-          <p>RESERVATIONS ARE RECOMMENDED</p>
+          <br />
+          <p>RECOMENDA-SE A EMISSÃO DE RESERVAS</p>
         </ul>
       </div>
       <div

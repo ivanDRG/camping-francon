@@ -116,7 +116,6 @@ h1 {
 .aboutContainer {
   background-color: #cfcaca;
   padding: 2vh 0;
-  min-height: 100vh;
 }
 .relative {
   position: relative;
@@ -160,7 +159,7 @@ h1 {
   background-color: rgb(53, 53, 53);
   color: #f8f8f8;
 }
-.galery ul{
+.galery ul {
   text-align: left !important;
 }
 .galery img {
@@ -198,4 +197,3 @@ h1 {
   border-radius: 5px;
   transition: 0.3s;
 }
-

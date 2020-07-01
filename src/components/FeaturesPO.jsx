@@ -7,33 +7,30 @@ import AirlineSeatIndividualSuiteIcon from "@material-ui/icons/AirlineSeatIndivi
 function Features() {
   return (
     <div id="Features" className="Features">
-      <h1>What we offer?</h1>
-      <p>
-        Bringing together the best of the coast and the countryside in one place
-      </p>
+      <h1>O que nós oferecemos?</h1>
+      <p>Reunir o melhor da costa e do campo num só lugar</p>
       <div className="row noMargin">
         <div className="col-12 col-md-4">
           <WeekendIcon />
-          <h3>Comfort</h3>
+          <h3>Conforto</h3>
           <p>
-            It has all kinds of amenities, such as access to electric light,
-            restaurant and showers to make you feel like at home.
+            Tem todo o tipo de comodidades, como o acesso à luz eléctrica,
+            restaurante e chuveiros para que você se sinta em casa.
           </p>
         </div>
         <div className="col-12 col-md-4">
           <BeachAccessIcon />
-          <h3>Leisure</h3>
+          <h3>Lazer</h3>
           <p>
-            Enjoy one of the best beaches in the estuary with direct access from
-            the campsite.
+            Desfrute de uma das melhores praias do estuário com acesso directo a
+            partir de o acampamento.
           </p>
         </div>
         <div className="col-12 col-md-4">
           <AirlineSeatIndividualSuiteIcon />
-          <h3>Tranquility</h3>
+          <h3>Tranquilidade</h3>
           <p>
-            Take advantage of the peace and quiet of the campsite during your
-            stay.
+            Aproveite a paz e o sossego do acampamento durante a sua estadia.
           </p>
         </div>
       </div>

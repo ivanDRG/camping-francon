@@ -9,25 +9,38 @@ import photo7 from "./images/carousel/photo3.jpg";
 import photo8 from "./images/carousel/photo5.jpg";
 import "../styles.css";
 
-
 function Bungalow() {
   return (
     <div id="Bungalows" className="galery row noMargin">
       <div className="col-12 col-md-4">
         <h1>Bungalows</h1>
         <ul>
-          <li style={{ marginBottom: 7 }}>Completamente equipado para 4 personas, habitación con cama de matrimonio, habitación con camas gemelas, sala de estar, cocina con nevera y baño con ducha.</li>
-          <li style={{ marginBottom: 7 }}>Cambio de ropa de cama y toallas semanal</li>
-          <li style={{ marginBottom: 7 }}>Bungalows con parking para un vehículo</li>
+          <li style={{ marginBottom: 7 }}>
+            Completamente equipado para 4 personas, habitación con cama de
+            matrimonio, habitación con camas gemelas, sala de estar, cocina con
+            nevera y baño con ducha.
+          </li>
+          <li style={{ marginBottom: 7 }}>
+            Cambio de ropa de cama y toallas semanal
+          </li>
+          <li style={{ marginBottom: 7 }}>
+            Bungalows con parking para un vehículo
+          </li>
           <li style={{ marginBottom: 7 }}>Terraza con mesa y sillas</li>
           <br />
-          <p>Hora de entrada:     16:00</p>
-          <p>Hora de salida:     12:00</p>
+          <p>Hora de entrada: 16:00</p>
+          <p>Hora de salida: 12:00</p>
           <p>Esrancia mínima:</p>
-          <p style={{ marginTop: 0, marginBottom: 0 }}>Semana Santa : 4 noches</p>
-          <p style={{ marginTop: 0, marginBottom: 0 }}>Julio y Agosto: 7 noches de sábado a sábado</p>
-          <p style={{ marginTop: 0, marginBottom: 0 }}>Junio y Septiembre: 2 noches</p>
-
+          <p style={{ marginTop: 0, marginBottom: 0 }}>
+            Semana Santa : 4 noches
+          </p>
+          <p style={{ marginTop: 0, marginBottom: 0 }}>
+            Julio y Agosto: 7 noches de sábado a sábado
+          </p>
+          <p style={{ marginTop: 0, marginBottom: 0 }}>
+            Junio y Septiembre: 2 noches
+          </p>
+          <br />
           <p>SE RECOMIENDA HACER RESERVA</p>
         </ul>
       </div>

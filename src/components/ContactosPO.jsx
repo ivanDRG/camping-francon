@@ -13,9 +13,9 @@ function Contactos() {
     <div id="Contactos">
       <div className="contactos row noMargin">
         <div className="col-12 col-md-7 contactosk">
-          <h2>Contact us!</h2>
-          <p>Don´t think twice, ask your doubts in this phone </p>
-          <p>+34 654 452 245 or contact us on our Social Media</p>
+          <h2>Contacte-nos!</h2>
+          <p>Não pense duas vezes, coloque as suas dúvidas neste telefone </p>
+          <p>+34 654 452 245 ou contacte-nos nas nossas Redes Sociais</p>
         </div>
         <div className="col-12 col-md-5 contactosk">
           <IconButton

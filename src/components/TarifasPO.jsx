@@ -16,7 +16,7 @@ function Tarifas() {
   const [car, setCar] = useState(false);
   const [moto, setMoto] = useState(false);
   const [result, setResult] = useState(
-    "Click the button to see the final price"
+    "Clique no botão para ver o preço final"
   );
   console.log(niños, adultos, where, from, to, car, moto, tc);
 
@@ -240,32 +240,32 @@ function Tarifas() {
         <div class="py-5 text-center">
           <h2>Prices</h2>
           <p class="lead">
-            Calculate the price of your stay in a quick and easy way, if you
-            want to know the price during{" "}
+            Calcule o preço da sua estadia de uma forma rápida e fácil, se
+            quiser saber o preço durante{" "}
           </p>
           <p className="lead">
             {" "}
-            Easter call +34 654 452 245 and ask for the rates.
+            Ligue para a Páscoa +34 654 452 245 e peça as tarifas.
           </p>
         </div>
         {err && (
           <div class="alert alert-danger" role="alert">
-            Check that all fields are filled in correctly
+            Verifique se todos os campos estão preenchidos corretamente
           </div>
         )}
         <div class="row">
           <div class="col-md-12 order-md-1">
-            <h4 class="mb-3">Price calculator</h4>
+            <h4 class="mb-3">Calculadora de preços</h4>
             <form action="" class="needs-validation" novalidate="">
               <div class="row">
                 <InputNumber
-                  name="Adults"
+                  name="Adultos"
                   change={(e) => {
                     setAdultos(e.target.value);
                   }}
                 />
                 <InputNumber
-                  name="Children"
+                  name="Crianças"
                   change={(e) => {
                     setNiños(e.target.value);
                   }}
@@ -280,7 +280,7 @@ function Tarifas() {
                   />
                 </div>
                 <div class="col-md-4 mb-3">
-                  <h4>From</h4>
+                  <h4>A partir de</h4>
                   <Calendar
                     change={(e) => {
                       setFrom(e.target.value);
@@ -288,7 +288,7 @@ function Tarifas() {
                   />
                 </div>
                 <div class="col-md-4 mb-3">
-                  <h4>Till</h4>
+                  <h4>Até</h4>
                   <Calendar
                     change={(e) => {
                       setTo(e.target.value);
@@ -302,7 +302,7 @@ function Tarifas() {
               <div className="row">
                 <div className="col-md-2 mb-6">
                   <CheckBox
-                    type="Car"
+                    type="Automóvel"
                     change={() => {
                       setCar(!car);
                     }}
@@ -310,7 +310,7 @@ function Tarifas() {
                 </div>
                 <div className="col-md-2 mb-6">
                   <CheckBox
-                    type="Motorbike"
+                    type="Motocicleta"
                     change={() => {
                       setMoto(!moto);
                     }}
@@ -318,7 +318,7 @@ function Tarifas() {
                 </div>
                 <div className="col-md-2 mb-6">
                   <CheckBox
-                    type="Power outlet"
+                    type="Tomada eléctrica"
                     change={() => {
                       setTC(!tc);
                     }}
@@ -331,7 +331,7 @@ function Tarifas() {
                 type="button"
                 onClick={calc}
               >
-                Calculating the final price
+                Cálculo do preço final
               </button>
               <h4 className="form-control">{result}</h4>
             </form>
