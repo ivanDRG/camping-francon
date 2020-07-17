@@ -1,0 +1,36 @@
+body {
+  background-color: salmon !important;
+}
+.device {
+  margin: 10% 30%;
+}
+.device-frame {
+  background: #222;
+  border-radius: 30px;
+  height: 430px;
+  padding: 12.5px 10px;
+  width: 209px;
+}
+.device-frame {
+  z-index: 1;
+}
+.device-header {
+  background: #222;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 15px;
+  left: 53px;
+  bottom: 420px;
+  position: relative;
+  width: 102px;
+}
+.device-content {
+  background-color: #fff;
+  background-position: center center;
+  background-size: cover;
+  object-fit: cover;
+  position: relative;
+  border-radius: 20px;
+  height: 406px;
+  width: 187.5px;
+}
