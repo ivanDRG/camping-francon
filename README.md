@@ -2,7 +2,7 @@
 
 ## I'm a Full-Stack web developer student
 - 🔭 I’m currently working on various web projects!
-- 🌱 Learning Backend advanced features 🤣
+- 🌱 Learning Backend advanced features 
 - 👯 I’m looking to collaborate with other developers
 - 🥅 2020 Goals: Contribute more to Open Source projects
 
